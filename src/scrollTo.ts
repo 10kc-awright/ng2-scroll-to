@@ -1,5 +1,7 @@
 import { Directive, ElementRef, Input, HostListener } from '@angular/core';
-const MouseEvent = (any as any).MouseEvent as MouseEvent;
+
+declare let global:any;
+const MouseEvent = (global as any).MouseEvent as MouseEvent;
 
 @Directive({
   selector: '[scrollTo]'

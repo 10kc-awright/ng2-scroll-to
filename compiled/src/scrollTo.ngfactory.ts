@@ -16,12 +16,14 @@ export class Wrapper_ScrollTo {
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
+  /*private*/ _expr_3:any;
   constructor(p0:any) {
     this._changed = false;
     this.context = new import0.ScrollTo(p0);
     this._expr_0 = import1.UNINITIALIZED;
     this._expr_1 = import1.UNINITIALIZED;
     this._expr_2 = import1.UNINITIALIZED;
+    this._expr_3 = import1.UNINITIALIZED;
   }
   ngOnDetach(view:import2.AppView<any>,componentView:import2.AppView<any>,el:any):void {
   }
@@ -46,6 +48,13 @@ export class Wrapper_ScrollTo {
       this._changed = true;
       this.context.scrollYTarget = currValue;
       this._expr_2 = currValue;
+    }
+  }
+  check_scrollOffSet(currValue:any,throwOnChange:boolean,forceUpdate:boolean):void {
+    if ((forceUpdate || import3.checkBinding(throwOnChange,this._expr_3,currValue))) {
+      this._changed = true;
+      this.context.scrollOffSet = currValue;
+      this._expr_3 = currValue;
     }
   }
   ngDoCheck(view:import2.AppView<any>,el:any,throwOnChange:boolean):boolean {
